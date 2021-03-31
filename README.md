@@ -3,13 +3,13 @@
 - **To clone the project**
 
 ```
-git clone git@github.com:djmaluy/QualiumSystemsTestTask.git
+git clone git@github.com:djmaluy/OblickSoft-test-task.git
 ```
 
 - **Go to the folder**
 
 ```
-cd QualiumSystemsTestTask
+cd OblickSoft-test-task
 ```
 
 - **Execute command**
@@ -23,5 +23,5 @@ npm install
 - **For quick application run use this command**
 
 ```
-npm run dev
+npm start
 ```
