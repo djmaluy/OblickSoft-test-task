@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "isRead": true,
+    "name": "Александра Александрова",
+    "phone": "095 555 55 55",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+    "date": "11:50 01.12.2020",
+    "image": "male"
+  },
+  {
+    "id": 2,
+    "isRead": false,
+    "name": "Александра Александрова",
+    "phone": "095 555 55 55",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "date": "11:52 05.12.2020",
+    "image": "female"
+  },
+  {
+    "id": 3,
+    "isRead": true,
+    "name": "Александра Александрова",
+    "phone": "095 555 55 55",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "date": "11:20 01.12.2020",
+    "image": "male"
+  },
+  {
+    "id": 4,
+    "isRead": false,
+    "name": "Александра Александрова",
+    "phone": "095 555 55 55",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "date": "11:58 09.12.2020",
+    "image": "female"
+  },
+  {
+    "id": 5,
+    "isRead": true,
+    "name": "Александра Александрова",
+    "phone": "095 555 55 55",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "date": "11:40 07.12.2020",
+    "image": "male"
+  },
+  {
+    "id": 6,
+    "isRead": false,
+    "name": "Александра Александрова",
+    "phone": "095 555 55 56",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "date": "12:50 11.12.2020",
+    "image": "female"
+  },
+  {
+    "id": 7,
+    "isRead": true,
+    "name": "Александра Александрова",
+    "phone": "095 555 55 55",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "date": "12:50 11.12.2020",
+    "image": "male"
+  }
+]
