@@ -7,15 +7,11 @@ body {
   background-color: #f6f7fc;
   padding: 20px;
 }
-tbody > td {
-  padding: 5px;
-}
 .date {
   display: flex;
   justify-content: space-between;
   color: #8e8e93;
 }
-
 .table-content {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 }
@@ -59,7 +55,7 @@ tbody > td {
   background-color: #fff;
 }
 .no-read {
-  background-color: #eff1f8;
+  background-color: #f2f4fa;
 }
 .head-table {
   display: flex;
@@ -91,8 +87,8 @@ tbody > td {
   display: flex;
   justify-content: center;
 }
-.search .test {
-  background-color: aquamarine;
+.hightlight {
+  color: #2c7dfa;
 }
 .search input {
   width: 70%;

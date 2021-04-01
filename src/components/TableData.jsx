@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Table } from "react-bootstrap";
 import { Refresh } from "./Refresh";
 import { SearchInput } from "./SearchInput";
-import * as moment from "moment";
+
+import { Hightlight } from "./Hightlight";
+import { TableRow } from "./TableRow";
 
 export const TableData = ({
   messages,
@@ -11,11 +13,19 @@ export const TableData = ({
   sortedData,
   onRowClick,
   handleChange,
+  filter,
 }) => {
   const onRefresh = () => {
     messages.length = 0;
     fetchData();
   };
+
+  const light = useCallback(
+    (str) => {
+      return <Hightlight filter={filter} str={str} />;
+    },
+    [filter]
+  );
 
   return (
     <div className="table-wrapper">
@@ -32,40 +42,12 @@ export const TableData = ({
             <tbody>
               {sortedData.map((message) => {
                 return (
-                  <tr
-                    onClick={() => onRowClick(message)}
+                  <TableRow
+                    message={message}
                     key={message.id}
-                    className={
-                      message.isRead === false ? "read row" : "no-read row"
-                    }
-                  >
-                    <td className="avatar">
-                      <img
-                        className={
-                          message.image === "male" ? "male-img" : "female-img"
-                        }
-                        src={`/icons/${message.image}.svg`}
-                        alt={message.image}
-                      />
-                      <img
-                        className="social"
-                        src={`/icons/${message.social}.svg`}
-                        alt={message.image}
-                      />
-                    </td>
-
-                    <td className="user-name">
-                      <div>{message.name}</div>
-                      <span>{message.phone}</span>
-                    </td>
-                    <td className="text">{message.text}</td>
-                    <td className="date">
-                      <div>{message.time}</div>
-                    </td>
-                    <td className="date">
-                      <div>{moment(message.date).format("MM:DD:YYYY")}</div>
-                    </td>
-                  </tr>
+                    light={light}
+                    onRowClick={onRowClick}
+                  />
                 );
               })}
             </tbody>

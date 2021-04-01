@@ -1,5 +1,5 @@
 import multisort from "multisort";
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { TableData } from "./components/TableData";
 
 function App() {
@@ -24,19 +24,20 @@ function App() {
     fetchData();
   }, []);
 
-  // const items = useMemo(() => {
-  //   if (filter) {
-  //     return sortedData.filter((m) => {
-  //       const matchValue = filter.toLowerCase();
-  //       const { name, phone, text } = m;
-  //       if (name.toLowerCase().includes(matchValue)) return true;
-  //       if (phone.toLowerCase().includes(matchValue)) return true;
-  //       if (text.toLowerCase().includes(matchValue)) return true;
-  //       return false;
-  //     });
-  //   }
-  //   return sortedData;
-  // }, [filter]);
+  //  фильтр данных ввода телефона в инпуте
+  const items = useMemo(() => {
+    if (filter) {
+      return sortedData.filter((m) => {
+        const matchValue = filter.toLowerCase();
+        const { name, phone, text } = m;
+        if (phone.toLowerCase().includes(matchValue)) return true;
+        if (name.toLowerCase().includes(matchValue)) return true;
+        if (text.toLowerCase().includes(matchValue)) return true;
+        return false;
+      });
+    }
+    return sortedData;
+  }, [filter, sortedData]);
 
   const handleChange = (e) => {
     const { value } = e.target;
@@ -53,6 +54,7 @@ function App() {
     );
   }, [messages]);
 
+  // Мультисортировка таблицы ( к сожалению сортирует дату только первые числа)
   const res = useCallback(() => {
     const inputData = [...messages];
     const criteria = ["isRead", "date"];
@@ -85,10 +87,11 @@ function App() {
       <TableData
         handleChange={handleChange}
         onRowClick={onRowClick}
-        sortedData={sortedData}
+        sortedData={items}
         messages={messages}
         isFetching={isFetching}
         fetchData={fetchData}
+        filter={filter}
       />
     </div>
   );

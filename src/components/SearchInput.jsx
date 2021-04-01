@@ -3,7 +3,11 @@ import React from "react";
 export const SearchInput = ({ handleChange }) => {
   return (
     <div className="search">
-      <input type="text" onChange={handleChange} />
+      <input
+        type="text"
+        onChange={handleChange}
+        placeholder="Пошук за телефоном"
+      />
       <div className="test">
         <img src={`icons/cancel.svg`} alt="cancel" className="cancel" />
       </div>
