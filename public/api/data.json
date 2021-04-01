@@ -5,8 +5,10 @@
     "name": "Александра Александрова",
     "phone": "095 555 55 55",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
-    "date": "11:50 01.12.2020",
-    "image": "male"
+    "date": " 01.12.2020",
+    "time": "11:50",
+    "image": "male",
+    "social": "telegram"
   },
   {
     "id": 2,
@@ -14,8 +16,10 @@
     "name": "Александра Александрова",
     "phone": "095 555 55 55",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "date": "11:52 05.12.2020",
-    "image": "female"
+    "date": "01.11.2020",
+    "time": "11:52",
+    "image": "female",
+    "social": "viber"
   },
   {
     "id": 3,
@@ -23,8 +27,10 @@
     "name": "Александра Александрова",
     "phone": "095 555 55 55",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "date": "11:20 01.12.2020",
-    "image": "male"
+    "date": "04.12.2020",
+    "time": "11:20",
+    "image": "male",
+    "social": "telegram"
   },
   {
     "id": 4,
@@ -32,26 +38,32 @@
     "name": "Александра Александрова",
     "phone": "095 555 55 55",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "date": "11:58 09.12.2020",
-    "image": "female"
+    "date": "09.08.2020",
+    "time": "14:24",
+    "image": "female",
+    "social": "viber"
   },
   {
     "id": 5,
-    "isRead": true,
+    "isRead": false,
     "name": "Александра Александрова",
     "phone": "095 555 55 55",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "date": "11:40 07.12.2020",
-    "image": "male"
+    "date": "07.12.2020",
+    "time": "11:40",
+    "image": "male",
+    "social": "telegram" 
   },
   {
     "id": 6,
-    "isRead": false,
+    "isRead": true,
     "name": "Александра Александрова",
     "phone": "095 555 55 56",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "date": "12:50 11.12.2020",
-    "image": "female"
+    "date": "07.12.2020",
+    "time": "11:47",
+    "image": "female",
+    "social": "viber"
   },
   {
     "id": 7,
@@ -59,7 +71,9 @@
     "name": "Александра Александрова",
     "phone": "095 555 55 55",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "date": "12:50 11.12.2020",
-    "image": "male"
+    "date": "01.09.2020",
+    "time": "11:27",
+    "image": "male",
+    "social": "telegram"
   }
 ]

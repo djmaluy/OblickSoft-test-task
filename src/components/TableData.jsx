@@ -1,6 +1,8 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import { Refresh } from "./Refresh";
+import { SearchInput } from "./SearchInput";
+import * as moment from "moment";
 
 export const TableData = ({
   messages,
@@ -8,6 +10,7 @@ export const TableData = ({
   fetchData,
   sortedData,
   onRowClick,
+  handleChange,
 }) => {
   const onRefresh = () => {
     messages.length = 0;
@@ -16,7 +19,7 @@ export const TableData = ({
 
   return (
     <div className="table-wrapper">
-      <input type="text" className="search" />
+      <SearchInput handleChange={handleChange} />
       <div className="head-table">
         {!isFetching && <Refresh onRefresh={onRefresh} />}
         <strong>Знайдено {messages.length} клієнтів</strong>
@@ -44,15 +47,23 @@ export const TableData = ({
                         src={`/icons/${message.image}.svg`}
                         alt={message.image}
                       />
+                      <img
+                        className="social"
+                        src={`/icons/${message.social}.svg`}
+                        alt={message.image}
+                      />
                     </td>
 
                     <td className="user-name">
                       <div>{message.name}</div>
                       <span>{message.phone}</span>
                     </td>
-                    <td className="text-color">{message.text}</td>
+                    <td className="text">{message.text}</td>
                     <td className="date">
-                      <span>{message.date}</span>
+                      <div>{message.time}</div>
+                    </td>
+                    <td className="date">
+                      <div>{moment(message.date).format("MM:DD:YYYY")}</div>
                     </td>
                   </tr>
                 );
